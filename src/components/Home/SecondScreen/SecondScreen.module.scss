@@ -1,0 +1,49 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.coursesWrap {
+  margin-top: -33px;
+  display: flex;
+  gap: 24px;
+  position: relative;
+}
+
+.courses {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 41px;
+}
+
+.message {
+  display: flex;
+  padding: 10px;
+  height: 56px;
+  width: 56px;
+  background-color: #200F65;
+  border-radius: 50px;
+  border: 2px solid #4024B2;
+  margin: auto 0 25px 0;
+  position: absolute;
+  bottom: 0;
+  right: -5rem;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.media-max(settings.$md-break) {
+    right: -2rem;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    right: -40px;
+    height: 36px;
+    width: 36px;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    right: 0;
+  }
+}

@@ -1,0 +1,105 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.firstScreen {
+  height: 100%;
+  width: calc(100% + 164px);
+  min-height: 613px;
+  padding-top: 95px;
+  background: url('../../../assets/images/home.jpg') no-repeat;
+  background-size: cover;
+
+  @include mixins.media-max(settings.$lg-break) {
+    width: calc(100% + 90px);
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    min-height: 513px;
+    width: calc(100% + 70px);
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    min-height: 413px;
+    width: calc(100% + 50px);
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    width: calc(100% + 20px);
+  }
+}
+
+.buyAndSell {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 65px;
+  width: 662px;
+  max-width: 100%;
+
+  @include mixins.media-max(settings.$md-break) {
+    font-size: 36px;
+    line-height: 45px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.transparent {
+  color: settings.$white;
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 16px;
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.buttons {
+  margin-top: 54px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  button {
+    white-space: pre;
+  }
+
+  .openButton {
+    width: fit-content;
+  }
+  .marketsButton {
+    width: fit-content;
+    background: rgba(64, 36, 178, 0.3);
+    border: 3px solid #5C40D3;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    button {
+      width: 200px !important;
+      padding: 12px 48px;
+      font-size: 16px;
+    }
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    button {
+      width: 170px !important;
+      padding: 12px 38px;
+      font-size: 14px;
+    }
+  }
+}

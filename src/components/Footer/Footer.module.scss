@@ -1,0 +1,127 @@
+@use './src/scss/settings';
+@use './src/scss/mixins';
+
+.footer {
+  width: 100%;
+  background-color: settings.$mainBg;
+  color: settings.$white;
+  padding: 56px 0 30px;
+  align-self: flex-end;
+  height: fit-content;
+
+  @include mixins.media-max(settings.$sm-break) {
+    p {
+      font-size: 14px;
+    }
+    h3 {
+      font-size: 16px
+    }
+  }
+}
+
+.footerMenu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 108px;
+  margin-bottom: 54px;
+  justify-content: center;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+
+    &:first-child {
+      margin-right: 27px;
+    }
+
+
+    @include mixins.media-max(settings.$md-break) {
+      padding: 0 20px;
+      margin: 0 auto 0 0;
+    }
+
+    @include mixins.media-max(settings.$xs-break) {
+      margin: 0 auto;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  @include mixins.media-max(settings.$lg-break) {
+    gap: 70px;
+  }
+
+    @include mixins.media-max(settings.$md-break) {
+    gap: 50px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    gap: 20px;
+    row-gap: 50px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.policy {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  border-top: 1px solid settings.$purpleBorder;
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 14px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    font-size: 12px;
+  }
+
+  .policyItem {
+    padding-right: 12px;
+    border-right: 1px solid;
+    color: settings.$white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.unioIt {
+  font-weight: 300;
+  opacity: .5;
+}
+
+.optionTitle {
+  text-transform: uppercase;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+
+  @include mixins.media-max(settings.$xs-break) {
+    align-items: center;
+  }
+}
+
+.logoBlock {
+  @include mixins.media-max(settings.$xs-break) {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

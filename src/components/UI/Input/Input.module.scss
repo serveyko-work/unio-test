@@ -1,0 +1,43 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: settings.$white;
+  font-weight: 600;
+  width: 454px;
+  max-width: 100%;
+  gap: 8px;
+}
+
+.searchInput {
+  padding: 12px 23px 12px 22px;
+  position: static;
+  height: 56px;
+  border: 1px solid settings.$white;
+  left: 0;
+  font-size: 16px;
+  top: 0;
+  background: transparent;
+  border-radius: 12px;
+  width: 100%;
+  color: settings.$white;
+
+  &::placeholder {
+    color: settings.$white;
+  }
+}
+
+.icon {
+  position: absolute;
+  left: 18px;
+  @include mixins.media-max(settings.$sm-break) {
+    left: 26px;
+  }
+}
+
+.placeholder {
+
+}

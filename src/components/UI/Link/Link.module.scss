@@ -1,0 +1,14 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.link {
+  font-size: 18px;
+  line-height: 27px;
+  color: settings.$white;
+  text-decoration: underline;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

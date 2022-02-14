@@ -1,0 +1,37 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.home {
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  background-size: cover;
+  background-position-y: bottom;
+  background-color: settings.$primaryBg;
+  padding-left: 164px;
+  max-width: 100%;
+  padding-right: 164px;
+
+  @include mixins.media-max(settings.$lg-break) {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

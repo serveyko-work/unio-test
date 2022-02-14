@@ -1,0 +1,74 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.slider {
+  max-width: 100%;
+  margin: 164px 150px 0 0;
+  width: 100%;
+
+  div {
+    padding: 0;
+  }
+
+  .square {
+    width: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+  }
+  @include mixins.media-max(settings.$lg-break) {
+    margin: 164px auto 0;
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    margin: 100px auto 0 55px;
+    width: calc(100% - 100px);
+  }
+}
+
+.arrow {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  border: 2px solid #4024B2;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.leftArrow {
+  transform: translateY(-50%) rotateZ(90deg);
+  left: -60px;
+}
+
+.rightArrow {
+  transform: translateY(-50%) rotateZ(-90deg);
+  right: -50px;
+}
+
+.cryptocurrency {
+  margin-top: 7px;
+  color: #8983A2;
+  display: flex;
+  gap: 16px;
+  margin-left: 15px;
+
+  .readMore {
+    color: settings.$white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    svg {
+      transform: rotateZ(-90deg);
+    }
+  }
+
+  @include mixins.media-max(settings.$md-break) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,111 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.fifthScreen {
+  margin-top: 105px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .cryptoWrapper {
+    display: flex;
+    column-gap: 75px;
+    width: 100%;
+
+    @include mixins.media-max(settings.$md-break) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .cryptoBlock {
+    background: linear-gradient(180.61deg, #4024B2 0.52%, rgba(65, 37, 181, 0) 77.09%);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 30px;
+
+    @include mixins.media-max(settings.$md-break) {
+      margin: 0 auto;
+    }
+
+    .cryptoWrap {
+      padding: 32px 15px 0;
+      background-color: #130645;
+      border-radius: 16px 16px 0 0;
+      margin: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+
+      .subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        color: #FFFFFF;
+        margin-bottom: 5px;
+
+        @include mixins.media-max(settings.$md-break) {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @include mixins.media-max(settings.$sm-break) {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+
+      .title {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 42px;
+        color: #FFFFFF;
+        margin-bottom: 16px;
+
+        @include mixins.media-max(settings.$md-break) {
+          font-size: 24px;
+          line-height: 30px;
+        }
+
+        @include mixins.media-max(settings.$sm-break) {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+
+      .description {
+        font-size: 16px;
+        line-height: 24px;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 32px;
+        text-align: center;
+
+        @include mixins.media-max(settings.$md-break) {
+          font-size: 14px;
+          line-height: 24px;
+        }
+
+        @include mixins.media-max(settings.$sm-break) {
+          line-height: 20px;
+        }
+      }
+
+      button {
+        width: 215px;
+        padding: 14px;
+
+        @include mixins.media-max(settings.$md-break) {
+          font-size: 16px;
+          padding: 12px;
+        }
+
+        @include mixins.media-max(settings.$sm-break) {
+          font-size: 14px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}

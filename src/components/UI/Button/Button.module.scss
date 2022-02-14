@@ -1,0 +1,19 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.button {
+  @include mixins.btn-reset();
+  width: 100%;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 14px 78px;
+  border-radius: 12px;
+  color: settings.$white;
+  transition: .5s;
+  background: linear-gradient(180deg, #4125B6 0%, #7357EC 100%);
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

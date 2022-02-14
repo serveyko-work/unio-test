@@ -1,0 +1,137 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.ourAdvantages {
+  margin-top: 105px;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+
+  @include mixins.media-max(settings.$md-break) {
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 20px;
+  column-gap: 50px;
+  margin-bottom: 54px;
+
+  @include mixins.media-max(settings.$md-break) {
+    column-gap: 30px;
+    p {
+      padding-right: 30px;
+    }
+  }
+
+
+  @include mixins.media-max(settings.$sm-break) {
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    p {
+      padding-right: 0;
+      text-align: center;
+    }
+  }
+
+  .advantageWrapper {
+    @include mixins.media-max(settings.$lg-break) {
+      &:nth-child(2) {
+        p {
+          margin-right: 0;
+          margin-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
+    &:last-child {
+      div {
+        &:last-child {
+          background: none;
+        }
+      }
+
+      p {
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.descriptionWrapper {
+  width: 324px;
+  background: linear-gradient(0deg, #AE9BFF00 10%, rgba(64, 36, 178, 0) 10%, #AE9BFF 80%);
+  @include mixins.media-max(settings.$md-break) {
+    width: 300px;
+  }
+}
+
+.advantageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  @include mixins.media-max(settings.$sm-break) {
+    p {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+}
+
+.advantageTitle {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.advantageDescription {
+  padding-top: 6px;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #FFFFFF;
+  padding-right: 50px;
+  background-color: #130645;
+  margin-right: 2px;
+  max-width: 100%;
+  margin-top: -2px;
+  margin-left: -2px;
+  font-weight: 300;
+}
+
+.startTradingButton {
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+}

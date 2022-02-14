@@ -1,0 +1,55 @@
+@use "./src/scss/mixins";
+@use "./src/scss/settings";
+
+.courseBlock {
+  background: linear-gradient(180.61deg, #4024B2 0.52%, rgba(65, 37, 181, 0) 77.09%);
+  border-radius: 16px;
+  width: 247px;
+  max-width: 100%;
+  padding-bottom: 30px;
+
+  @include mixins.media-max(settings.$md-break) {
+    margin: 0 auto;
+  }
+}
+
+.courseWrap {
+  padding-top: 12px;
+  background-color: #130645;
+  border-radius: 16px 16px 0 0;
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  .name {
+    margin-bottom: 4px;
+    color: #B8B4C7;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  .plus {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #27AB33;
+  }
+
+  .minus {
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #FF3035;
+  }
+
+  .value {
+    color: settings.$white;
+  }
+}
