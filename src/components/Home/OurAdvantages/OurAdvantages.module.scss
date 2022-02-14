@@ -29,7 +29,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 20px;
+  row-gap: 50px;
   column-gap: 50px;
   margin-bottom: 54px;
 
@@ -57,7 +57,7 @@
   }
 
   .advantageWrapper {
-    @include mixins.media-max(settings.$lg-break) {
+    @include mixins.media-max(1416) {
       &:nth-child(2) {
         p {
           margin-right: 0;
@@ -85,6 +85,7 @@
 
 .descriptionWrapper {
   width: 324px;
+  max-width: 100%;
   background: linear-gradient(0deg, #AE9BFF00 10%, rgba(64, 36, 178, 0) 10%, #AE9BFF 80%);
   @include mixins.media-max(settings.$md-break) {
     width: 300px;
@@ -95,6 +96,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-width: 100%;
 
   @include mixins.media-max(settings.$sm-break) {
     p {
@@ -128,6 +130,10 @@
   margin-top: -2px;
   margin-left: -2px;
   font-weight: 300;
+
+  @include mixins.media-max(settings.$sm-break) {
+    font-size: 14px;
+  }
 }
 
 .startTradingButton {

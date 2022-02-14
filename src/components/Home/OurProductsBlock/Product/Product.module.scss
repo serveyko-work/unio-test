@@ -51,4 +51,12 @@
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
   }
+
+  @include mixins.media-max(settings.$sm-break) {
+    padding: 70px 35px;
+  }
+
+  @include mixins.media-max(settings.$xs-break) {
+    padding: 50px 20px;
+  }
 }

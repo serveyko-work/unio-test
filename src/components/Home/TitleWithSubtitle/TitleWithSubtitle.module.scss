@@ -8,6 +8,7 @@
   text-transform: uppercase;
   color: #FFFFFF;
   margin-bottom: 12px;
+  text-align: center;
 
   @include mixins.media-max(settings.$md-break) {
     font-size: 24px;
